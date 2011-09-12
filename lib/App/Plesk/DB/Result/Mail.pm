@@ -171,7 +171,9 @@ __PACKAGE__->add_columns(
 );
 __PACKAGE__->set_primary_key('id');
 __PACKAGE__->add_unique_constraint('dom_id', ['dom_id', 'mail_name']);
-__PACKAGE__->belongs_to( account => 'App::Plesk::DB::Result::Account' );
+__PACKAGE__->belongs_to( account => 'App::Plesk::DB::Result::Account',
+    { 'foreign.id' => 'self.account_id' }
+);
 
 
 # Created by DBIx::Class::Schema::Loader v0.07010 @ 2011-09-07 01:57:16
