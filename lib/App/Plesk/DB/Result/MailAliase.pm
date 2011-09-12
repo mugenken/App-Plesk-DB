@@ -15,7 +15,7 @@ App::Plesk::DB::Result::MailAliase
 
 =cut
 
-__PACKAGE__->table("mail_aliases");
+__PACKAGE__->table('mail_aliases');
 
 =head1 ACCESSORS
 
@@ -41,20 +41,23 @@ __PACKAGE__->table("mail_aliases");
 =cut
 
 __PACKAGE__->add_columns(
-  "id",
+  'id',
   {
-    data_type => "integer",
+    data_type => 'integer',
     extra => { unsigned => 1 },
     is_auto_increment => 1,
     is_nullable => 0,
   },
-  "mn_id",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 0 },
-  "alias",
-  { data_type => "varchar", is_nullable => 0, size => 245 },
+  'mn_id',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 0 },
+  'alias',
+  { data_type => 'varchar', is_nullable => 0, size => 245 },
 );
-__PACKAGE__->set_primary_key("id");
-__PACKAGE__->add_unique_constraint("mn_id", ["mn_id", "alias"]);
+__PACKAGE__->set_primary_key('id');
+__PACKAGE__->add_unique_constraint('mn_id', ['mn_id', 'alias']);
+__PACKAGE__->belongs_to( mail => 'App::Plesk::DB::Result::Mail',
+    { 'foreign.id' => 'self.mn_id' }
+);
 
 
 # Created by DBIx::Class::Schema::Loader v0.07010 @ 2011-09-07 01:57:16

@@ -15,7 +15,7 @@ App::Plesk::DB::Result::Permission
 
 =cut
 
-__PACKAGE__->table("Permissions");
+__PACKAGE__->table('Permissions');
 
 =head1 ACCESSORS
 
@@ -41,19 +41,22 @@ __PACKAGE__->table("Permissions");
 =cut
 
 __PACKAGE__->add_columns(
-  "id",
+  'id',
   {
-    data_type => "integer",
+    data_type => 'integer',
     extra => { unsigned => 1 },
     is_auto_increment => 1,
     is_nullable => 0,
   },
-  "permission",
-  { data_type => "varchar", is_nullable => 0, size => 245 },
-  "value",
-  { data_type => "varbinary", is_nullable => 1, size => 255 },
+  'permission',
+  { data_type => 'varchar', is_nullable => 0, size => 245 },
+  'value',
+  { data_type => 'varbinary', is_nullable => 1, size => 255 },
 );
-__PACKAGE__->set_primary_key("id", "permission");
+__PACKAGE__->set_primary_key('id', 'permission');
+__PACKAGE__->has_many('mails' => 'App::Plesk::DB::Result::Mail',
+    { 'foreign.perm_id' => 'self.id' }
+);
 
 
 # Created by DBIx::Class::Schema::Loader v0.07010 @ 2011-09-07 01:57:16

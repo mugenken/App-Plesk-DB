@@ -158,6 +158,7 @@ __PACKAGE__->add_columns(
 __PACKAGE__->set_primary_key('id');
 __PACKAGE__->add_unique_constraint('name', ['name']);
 __PACKAGE__->has_many('maillists', 'App::Plesk::DB::Result::MailList', 'dom_id');
+__PACKAGE__->has_many('mails', 'App::Plesk::DB::Result::Mail', 'dom_id');
 
 
 # Created by DBIx::Class::Schema::Loader v0.07010 @ 2011-09-07 01:57:16

@@ -174,6 +174,13 @@ __PACKAGE__->add_unique_constraint('dom_id', ['dom_id', 'mail_name']);
 __PACKAGE__->belongs_to( account => 'App::Plesk::DB::Result::Account',
     { 'foreign.id' => 'self.account_id' }
 );
+__PACKAGE__->belongs_to( domain => 'App::Plesk::DB::Result::Domain',
+    { 'foreign.id' => 'self.dom_id' }
+);
+__PACKAGE__->belongs_to( permission => 'App::Plesk::DB::Result::Permission',
+    { 'foreign.id' => 'self.perm_id' }
+);
+__PACKAGE__->has_many('aliases' => 'App::Plesk::DB::Result::MailAliase', 'mn_id');
 
 
 # Created by DBIx::Class::Schema::Loader v0.07010 @ 2011-09-07 01:57:16
