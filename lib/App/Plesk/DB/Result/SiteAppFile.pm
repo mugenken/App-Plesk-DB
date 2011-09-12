@@ -15,7 +15,7 @@ App::Plesk::DB::Result::SiteAppFile
 
 =cut
 
-__PACKAGE__->table("SiteAppFiles");
+__PACKAGE__->table('SiteAppFiles');
 
 =head1 ACCESSORS
 
@@ -28,7 +28,7 @@ __PACKAGE__->table("SiteAppFiles");
 =head2 prefix
 
   data_type: 'enum'
-  extra: {list => ["htdocs","cgi-bin"]}
+  extra: {list => ['htdocs','cgi-bin']}
   is_nullable: 0
 
 =head2 file
@@ -40,16 +40,16 @@ __PACKAGE__->table("SiteAppFiles");
 =cut
 
 __PACKAGE__->add_columns(
-  "instance_id",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 0 },
-  "prefix",
+  'instance_id',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 0 },
+  'prefix',
   {
-    data_type => "enum",
-    extra => { list => ["htdocs", "cgi-bin"] },
+    data_type => 'enum',
+    extra => { list => ['htdocs', 'cgi-bin'] },
     is_nullable => 0,
   },
-  "file",
-  { data_type => "varbinary", is_nullable => 0, size => 255 },
+  'file',
+  { data_type => 'varbinary', is_nullable => 0, size => 255 },
 );
 
 

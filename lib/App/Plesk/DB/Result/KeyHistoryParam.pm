@@ -15,7 +15,7 @@ App::Plesk::DB::Result::KeyHistoryParam
 
 =cut
 
-__PACKAGE__->table("key_history_params");
+__PACKAGE__->table('key_history_params');
 
 =head1 ACCESSORS
 
@@ -40,14 +40,14 @@ __PACKAGE__->table("key_history_params");
 =cut
 
 __PACKAGE__->add_columns(
-  "key_id",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 0 },
-  "param",
-  { data_type => "varchar", is_nullable => 0, size => 63 },
-  "val",
-  { data_type => "varbinary", is_nullable => 0, size => 255 },
+  'key_id',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 0 },
+  'param',
+  { data_type => 'varchar', is_nullable => 0, size => 63 },
+  'val',
+  { data_type => 'varbinary', is_nullable => 0, size => 255 },
 );
-__PACKAGE__->set_primary_key("key_id", "param");
+__PACKAGE__->set_primary_key('key_id', 'param');
 
 
 # Created by DBIx::Class::Schema::Loader v0.07010 @ 2011-09-07 01:57:16

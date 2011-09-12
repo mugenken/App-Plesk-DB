@@ -15,7 +15,7 @@ App::Plesk::DB::Result::Locale
 
 =cut
 
-__PACKAGE__->table("locales");
+__PACKAGE__->table('locales');
 
 =head1 ACCESSORS
 
@@ -29,23 +29,23 @@ __PACKAGE__->table("locales");
 
   data_type: 'enum'
   default_value: 'true'
-  extra: {list => ["false","true"]}
+  extra: {list => ['false','true']}
   is_nullable: 0
 
 =cut
 
 __PACKAGE__->add_columns(
-  "id",
-  { data_type => "varchar", is_nullable => 0, size => 17 },
-  "active",
+  'id',
+  { data_type => 'varchar', is_nullable => 0, size => 17 },
+  'active',
   {
-    data_type => "enum",
-    default_value => "true",
-    extra => { list => ["false", "true"] },
+    data_type => 'enum',
+    default_value => 'true',
+    extra => { list => ['false', 'true'] },
     is_nullable => 0,
   },
 );
-__PACKAGE__->set_primary_key("id");
+__PACKAGE__->set_primary_key('id');
 
 
 # Created by DBIx::Class::Schema::Loader v0.07010 @ 2011-09-07 01:57:16

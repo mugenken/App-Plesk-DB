@@ -15,7 +15,7 @@ App::Plesk::DB::Result::ReportAuto
 
 =cut
 
-__PACKAGE__->table("report_auto");
+__PACKAGE__->table('report_auto');
 
 =head1 ACCESSORS
 
@@ -73,43 +73,43 @@ __PACKAGE__->table("report_auto");
 =cut
 
 __PACKAGE__->add_columns(
-  "id",
+  'id',
   {
-    data_type => "integer",
+    data_type => 'integer',
     extra => { unsigned => 1 },
     is_auto_increment => 1,
     is_nullable => 0,
   },
-  "report_id",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 0 },
-  "auto",
+  'report_id',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 0 },
+  'auto',
   {
-    data_type => "integer",
+    data_type => 'integer',
     default_value => 0,
     extra => { unsigned => 1 },
     is_nullable => 0,
   },
-  "last",
+  'last',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 1,
   },
-  "recipient",
+  'recipient',
   {
-    data_type => "integer",
+    data_type => 'integer',
     default_value => 0,
     extra => { unsigned => 1 },
     is_nullable => 0,
   },
-  "email",
-  { data_type => "varchar", is_nullable => 0, size => 254 },
-  "client",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 1 },
-  "domain",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 1 },
+  'email',
+  { data_type => 'varchar', is_nullable => 0, size => 254 },
+  'client',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 1 },
+  'domain',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 1 },
 );
-__PACKAGE__->set_primary_key("id");
+__PACKAGE__->set_primary_key('id');
 
 
 # Created by DBIx::Class::Schema::Loader v0.07010 @ 2011-09-07 01:57:16

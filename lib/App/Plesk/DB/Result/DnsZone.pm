@@ -15,7 +15,7 @@ App::Plesk::DB::Result::DnsZone
 
 =cut
 
-__PACKAGE__->table("dns_zone");
+__PACKAGE__->table('dns_zone');
 
 =head1 ACCESSORS
 
@@ -55,7 +55,7 @@ __PACKAGE__->table("dns_zone");
 
   data_type: 'enum'
   default_value: 'master'
-  extra: {list => ["slave","master"]}
+  extra: {list => ['slave','master']}
   is_nullable: 0
 
 =head2 ttl
@@ -132,7 +132,7 @@ __PACKAGE__->table("dns_zone");
 
   data_type: 'enum'
   default_value: 'UNIXTIMESTAMP'
-  extra: {list => ["UNIXTIMESTAMP","YYYYMMDDNN"]}
+  extra: {list => ['UNIXTIMESTAMP','YYYYMMDDNN']}
   is_nullable: 0
 
 =head2 serial
@@ -145,114 +145,114 @@ __PACKAGE__->table("dns_zone");
 =cut
 
 __PACKAGE__->add_columns(
-  "id",
+  'id',
   {
-    data_type => "integer",
+    data_type => 'integer',
     extra => { unsigned => 1 },
     is_auto_increment => 1,
     is_nullable => 0,
   },
-  "name",
-  { data_type => "varchar", is_nullable => 0, size => 255 },
-  "displayname",
-  { data_type => "varchar", is_nullable => 0, size => 255 },
-  "status",
+  'name',
+  { data_type => 'varchar', is_nullable => 0, size => 255 },
+  'displayname',
+  { data_type => 'varchar', is_nullable => 0, size => 255 },
+  'status',
   {
-    data_type => "integer",
+    data_type => 'integer',
     default_value => 0,
     extra => { unsigned => 1 },
     is_nullable => 0,
   },
-  "email",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "type",
+  'email',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'type',
   {
-    data_type => "enum",
-    default_value => "master",
-    extra => { list => ["slave", "master"] },
+    data_type => 'enum',
+    default_value => 'master',
+    extra => { list => ['slave', 'master'] },
     is_nullable => 0,
   },
-  "ttl",
+  'ttl',
   {
-    data_type => "integer",
+    data_type => 'integer',
     default_value => 86400,
     extra => { unsigned => 1 },
     is_nullable => 0,
   },
-  "ttl_unit",
+  'ttl_unit',
   {
-    data_type => "integer",
+    data_type => 'integer',
     default_value => 1,
     extra => { unsigned => 1 },
     is_nullable => 0,
   },
-  "refresh",
+  'refresh',
   {
-    data_type => "integer",
+    data_type => 'integer',
     default_value => 10800,
     extra => { unsigned => 1 },
     is_nullable => 0,
   },
-  "refresh_unit",
+  'refresh_unit',
   {
-    data_type => "integer",
+    data_type => 'integer',
     default_value => 1,
     extra => { unsigned => 1 },
     is_nullable => 0,
   },
-  "retry",
+  'retry',
   {
-    data_type => "integer",
+    data_type => 'integer',
     default_value => 3600,
     extra => { unsigned => 1 },
     is_nullable => 0,
   },
-  "retry_unit",
+  'retry_unit',
   {
-    data_type => "integer",
+    data_type => 'integer',
     default_value => 1,
     extra => { unsigned => 1 },
     is_nullable => 0,
   },
-  "expire",
+  'expire',
   {
-    data_type => "integer",
+    data_type => 'integer',
     default_value => 604800,
     extra => { unsigned => 1 },
     is_nullable => 0,
   },
-  "expire_unit",
+  'expire_unit',
   {
-    data_type => "integer",
+    data_type => 'integer',
     default_value => 1,
     extra => { unsigned => 1 },
     is_nullable => 0,
   },
-  "minimum",
+  'minimum',
   {
-    data_type => "integer",
+    data_type => 'integer',
     default_value => 10800,
     extra => { unsigned => 1 },
     is_nullable => 0,
   },
-  "minimum_unit",
+  'minimum_unit',
   {
-    data_type => "integer",
+    data_type => 'integer',
     default_value => 1,
     extra => { unsigned => 1 },
     is_nullable => 0,
   },
-  "serial_format",
+  'serial_format',
   {
-    data_type => "enum",
-    default_value => "UNIXTIMESTAMP",
-    extra => { list => ["UNIXTIMESTAMP", "YYYYMMDDNN"] },
+    data_type => 'enum',
+    default_value => 'UNIXTIMESTAMP',
+    extra => { list => ['UNIXTIMESTAMP', 'YYYYMMDDNN'] },
     is_nullable => 0,
   },
-  "serial",
-  { data_type => "varchar", default_value => 0, is_nullable => 0, size => 12 },
+  'serial',
+  { data_type => 'varchar', default_value => 0, is_nullable => 0, size => 12 },
 );
-__PACKAGE__->set_primary_key("id");
+__PACKAGE__->set_primary_key('id');
 
 
 # Created by DBIx::Class::Schema::Loader v0.07010 @ 2011-09-07 01:57:16

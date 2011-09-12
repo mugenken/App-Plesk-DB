@@ -15,7 +15,7 @@ App::Plesk::DB::Result::MassMailClient
 
 =cut
 
-__PACKAGE__->table("mass_mail_clients");
+__PACKAGE__->table('mass_mail_clients');
 
 =head1 ACCESSORS
 
@@ -34,12 +34,12 @@ __PACKAGE__->table("mass_mail_clients");
 =cut
 
 __PACKAGE__->add_columns(
-  "mm_id",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 0 },
-  "cl_id",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 0 },
+  'mm_id',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 0 },
+  'cl_id',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 0 },
 );
-__PACKAGE__->add_unique_constraint("mm_id_2", ["mm_id", "cl_id"]);
+__PACKAGE__->add_unique_constraint('mm_id_2', ['mm_id', 'cl_id']);
 
 
 # Created by DBIx::Class::Schema::Loader v0.07010 @ 2011-09-07 01:57:16

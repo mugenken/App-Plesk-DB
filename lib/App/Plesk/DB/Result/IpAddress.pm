@@ -15,7 +15,7 @@ App::Plesk::DB::Result::IpAddress
 
 =cut
 
-__PACKAGE__->table("IP_Addresses");
+__PACKAGE__->table('IP_Addresses');
 
 =head1 ACCESSORS
 
@@ -49,7 +49,7 @@ __PACKAGE__->table("IP_Addresses");
 
   data_type: 'enum'
   default_value: 'shared'
-  extra: {list => ["shared","exclusive"]}
+  extra: {list => ['shared','exclusive']}
   is_nullable: 0
 
 =head2 ssl_certificate_id
@@ -67,38 +67,38 @@ __PACKAGE__->table("IP_Addresses");
 =cut
 
 __PACKAGE__->add_columns(
-  "id",
+  'id',
   {
-    data_type => "integer",
+    data_type => 'integer',
     extra => { unsigned => 1 },
     is_auto_increment => 1,
     is_nullable => 0,
   },
-  "ip_address",
-  { data_type => "varchar", is_nullable => 0, size => 15 },
-  "mask",
+  'ip_address',
+  { data_type => 'varchar', is_nullable => 0, size => 15 },
+  'mask',
   {
-    data_type => "varchar",
-    default_value => "255.255.255.0",
+    data_type => 'varchar',
+    default_value => '255.255.255.0',
     is_nullable => 0,
     size => 15,
   },
-  "iface",
-  { data_type => "varchar", is_nullable => 0, size => 255 },
-  "type",
+  'iface',
+  { data_type => 'varchar', is_nullable => 0, size => 255 },
+  'type',
   {
-    data_type => "enum",
-    default_value => "shared",
-    extra => { list => ["shared", "exclusive"] },
+    data_type => 'enum',
+    default_value => 'shared',
+    extra => { list => ['shared', 'exclusive'] },
     is_nullable => 0,
   },
-  "ssl_certificate_id",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 0 },
-  "default_domain_id",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 1 },
+  'ssl_certificate_id',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 0 },
+  'default_domain_id',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 1 },
 );
-__PACKAGE__->set_primary_key("id");
-__PACKAGE__->add_unique_constraint("ip_address", ["ip_address"]);
+__PACKAGE__->set_primary_key('id');
+__PACKAGE__->add_unique_constraint('ip_address', ['ip_address']);
 
 
 # Created by DBIx::Class::Schema::Loader v0.07010 @ 2011-09-07 01:57:16

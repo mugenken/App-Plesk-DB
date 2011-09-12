@@ -15,7 +15,7 @@ App::Plesk::DB::Result::SiteapppackagesApscategory
 
 =cut
 
-__PACKAGE__->table("siteapppackages_apscategories");
+__PACKAGE__->table('siteapppackages_apscategories');
 
 =head1 ACCESSORS
 
@@ -40,12 +40,12 @@ __PACKAGE__->table("siteapppackages_apscategories");
 =cut
 
 __PACKAGE__->add_columns(
-  "siteapppackage_id",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 0 },
-  "apscategory_id",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 0 },
-  "order",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 0 },
+  'siteapppackage_id',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 0 },
+  'apscategory_id',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 0 },
+  'order',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 0 },
 );
 
 

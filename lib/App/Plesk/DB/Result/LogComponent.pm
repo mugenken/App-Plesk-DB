@@ -15,7 +15,7 @@ App::Plesk::DB::Result::LogComponent
 
 =cut
 
-__PACKAGE__->table("log_components");
+__PACKAGE__->table('log_components');
 
 =head1 ACCESSORS
 
@@ -46,16 +46,16 @@ __PACKAGE__->table("log_components");
 =cut
 
 __PACKAGE__->add_columns(
-  "action_id",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 0 },
-  "component",
-  { data_type => "varchar", is_nullable => 0, size => 245 },
-  "old_value",
-  { data_type => "varbinary", is_nullable => 0, size => 255 },
-  "new_value",
-  { data_type => "varbinary", is_nullable => 0, size => 255 },
+  'action_id',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 0 },
+  'component',
+  { data_type => 'varchar', is_nullable => 0, size => 245 },
+  'old_value',
+  { data_type => 'varbinary', is_nullable => 0, size => 255 },
+  'new_value',
+  { data_type => 'varbinary', is_nullable => 0, size => 255 },
 );
-__PACKAGE__->set_primary_key("action_id", "component");
+__PACKAGE__->set_primary_key('action_id', 'component');
 
 
 # Created by DBIx::Class::Schema::Loader v0.07010 @ 2011-09-07 01:57:16

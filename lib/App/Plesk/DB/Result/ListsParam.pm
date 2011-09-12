@@ -15,7 +15,7 @@ App::Plesk::DB::Result::ListsParam
 
 =cut
 
-__PACKAGE__->table("ListsParams");
+__PACKAGE__->table('ListsParams');
 
 =head1 ACCESSORS
 
@@ -83,51 +83,51 @@ __PACKAGE__->table("ListsParams");
 =cut
 
 __PACKAGE__->add_columns(
-  "user_id",
+  'user_id',
   {
-    data_type => "integer",
+    data_type => 'integer',
     default_value => 0,
     extra => { unsigned => 1 },
     is_nullable => 0,
   },
-  "user_type",
+  'user_type',
   {
-    data_type => "integer",
+    data_type => 'integer',
     default_value => 0,
     extra => { unsigned => 1 },
     is_nullable => 0,
   },
-  "parentlist_id",
+  'parentlist_id',
   {
-    data_type => "integer",
+    data_type => 'integer',
     default_value => 0,
     extra => { unsigned => 1 },
     is_nullable => 0,
   },
-  "list_name",
-  { data_type => "varchar", default_value => "", is_nullable => 0, size => 225 },
-  "flags",
+  'list_name',
+  { data_type => 'varchar', default_value => '', is_nullable => 0, size => 225 },
+  'flags',
   {
-    data_type => "integer",
+    data_type => 'integer',
     default_value => 0,
     extra => { unsigned => 1 },
     is_nullable => 0,
   },
-  "sort",
+  'sort',
   {
-    data_type => "varchar",
-    default_value => "name",
+    data_type => 'varchar',
+    default_value => 'name',
     is_nullable => 0,
     size => 255,
   },
-  "filter",
-  { data_type => "varchar", default_value => "", is_nullable => 0, size => 255 },
-  "page",
-  { data_type => "integer", default_value => 0, is_nullable => 0 },
-  "page_size",
-  { data_type => "integer", default_value => 25, is_nullable => 0 },
+  'filter',
+  { data_type => 'varchar', default_value => '', is_nullable => 0, size => 255 },
+  'page',
+  { data_type => 'integer', default_value => 0, is_nullable => 0 },
+  'page_size',
+  { data_type => 'integer', default_value => 25, is_nullable => 0 },
 );
-__PACKAGE__->set_primary_key("user_id", "user_type", "parentlist_id", "list_name");
+__PACKAGE__->set_primary_key('user_id', 'user_type', 'parentlist_id', 'list_name');
 
 
 # Created by DBIx::Class::Schema::Loader v0.07010 @ 2011-09-07 01:57:16

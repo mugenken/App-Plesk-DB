@@ -15,7 +15,7 @@ App::Plesk::DB::Result::Lockout
 
 =cut
 
-__PACKAGE__->table("lockout");
+__PACKAGE__->table('lockout');
 
 =head1 ACCESSORS
 
@@ -41,19 +41,19 @@ __PACKAGE__->table("lockout");
 =cut
 
 __PACKAGE__->add_columns(
-  "login",
-  { data_type => "varchar", is_nullable => 0, size => 20 },
-  "last_wrong",
+  'login',
+  { data_type => 'varchar', is_nullable => 0, size => 20 },
+  'last_wrong',
   {
-    data_type => "timestamp",
+    data_type => 'timestamp',
     datetime_undef_if_invalid => 1,
-    default_value => \"current_timestamp",
+    default_value => \'current_timestamp',
     is_nullable => 0,
   },
-  "attempts",
-  { data_type => "integer", default_value => 1, is_nullable => 0 },
+  'attempts',
+  { data_type => 'integer', default_value => 1, is_nullable => 0 },
 );
-__PACKAGE__->set_primary_key("login");
+__PACKAGE__->set_primary_key('login');
 
 
 # Created by DBIx::Class::Schema::Loader v0.07010 @ 2011-09-07 01:57:16

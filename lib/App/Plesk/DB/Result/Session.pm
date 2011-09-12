@@ -15,7 +15,7 @@ App::Plesk::DB::Result::Session
 
 =cut
 
-__PACKAGE__->table("sessions");
+__PACKAGE__->table('sessions');
 
 =head1 ACCESSORS
 
@@ -59,29 +59,29 @@ __PACKAGE__->table("sessions");
 =cut
 
 __PACKAGE__->add_columns(
-  "sess_id",
-  { data_type => "varchar", is_nullable => 0, size => 33 },
-  "type",
-  { data_type => "smallint", extra => { unsigned => 1 }, is_nullable => 0 },
-  "login",
-  { data_type => "varchar", is_nullable => 0, size => 255 },
-  "ip_address",
-  { data_type => "varchar", is_nullable => 0, size => 15 },
-  "login_time",
+  'sess_id',
+  { data_type => 'varchar', is_nullable => 0, size => 33 },
+  'type',
+  { data_type => 'smallint', extra => { unsigned => 1 }, is_nullable => 0 },
+  'login',
+  { data_type => 'varchar', is_nullable => 0, size => 255 },
+  'ip_address',
+  { data_type => 'varchar', is_nullable => 0, size => 15 },
+  'login_time',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 0,
   },
-  "click_time",
+  'click_time',
   {
-    data_type => "timestamp",
+    data_type => 'timestamp',
     datetime_undef_if_invalid => 1,
-    default_value => \"current_timestamp",
+    default_value => \'current_timestamp',
     is_nullable => 0,
   },
 );
-__PACKAGE__->set_primary_key("sess_id");
+__PACKAGE__->set_primary_key('sess_id');
 
 
 # Created by DBIx::Class::Schema::Loader v0.07010 @ 2011-09-07 01:57:16

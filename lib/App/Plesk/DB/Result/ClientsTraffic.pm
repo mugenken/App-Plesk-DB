@@ -15,7 +15,7 @@ App::Plesk::DB::Result::ClientsTraffic
 
 =cut
 
-__PACKAGE__->table("ClientsTraffic");
+__PACKAGE__->table('ClientsTraffic');
 
 =head1 ACCESSORS
 
@@ -90,68 +90,68 @@ __PACKAGE__->table("ClientsTraffic");
 =cut
 
 __PACKAGE__->add_columns(
-  "cl_id",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 0 },
-  "date",
-  { data_type => "date", datetime_undef_if_invalid => 1, is_nullable => 0 },
-  "http_in",
+  'cl_id',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 0 },
+  'date',
+  { data_type => 'date', datetime_undef_if_invalid => 1, is_nullable => 0 },
+  'http_in',
   {
-    data_type => "bigint",
+    data_type => 'bigint',
     default_value => 0,
     extra => { unsigned => 1 },
     is_nullable => 0,
   },
-  "http_out",
+  'http_out',
   {
-    data_type => "bigint",
+    data_type => 'bigint',
     default_value => 0,
     extra => { unsigned => 1 },
     is_nullable => 0,
   },
-  "ftp_in",
+  'ftp_in',
   {
-    data_type => "bigint",
+    data_type => 'bigint',
     default_value => 0,
     extra => { unsigned => 1 },
     is_nullable => 0,
   },
-  "ftp_out",
+  'ftp_out',
   {
-    data_type => "bigint",
+    data_type => 'bigint',
     default_value => 0,
     extra => { unsigned => 1 },
     is_nullable => 0,
   },
-  "smtp_in",
+  'smtp_in',
   {
-    data_type => "bigint",
+    data_type => 'bigint',
     default_value => 0,
     extra => { unsigned => 1 },
     is_nullable => 0,
   },
-  "smtp_out",
+  'smtp_out',
   {
-    data_type => "bigint",
+    data_type => 'bigint',
     default_value => 0,
     extra => { unsigned => 1 },
     is_nullable => 0,
   },
-  "pop3_imap_in",
+  'pop3_imap_in',
   {
-    data_type => "bigint",
+    data_type => 'bigint',
     default_value => 0,
     extra => { unsigned => 1 },
     is_nullable => 0,
   },
-  "pop3_imap_out",
+  'pop3_imap_out',
   {
-    data_type => "bigint",
+    data_type => 'bigint',
     default_value => 0,
     extra => { unsigned => 1 },
     is_nullable => 0,
   },
 );
-__PACKAGE__->set_primary_key("cl_id", "date");
+__PACKAGE__->set_primary_key('cl_id', 'date');
 
 
 # Created by DBIx::Class::Schema::Loader v0.07010 @ 2011-09-07 01:57:16

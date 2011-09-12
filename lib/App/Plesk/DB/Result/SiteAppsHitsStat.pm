@@ -15,7 +15,7 @@ App::Plesk::DB::Result::SiteAppsHitsStat
 
 =cut
 
-__PACKAGE__->table("SiteAppsHitsStat");
+__PACKAGE__->table('SiteAppsHitsStat');
 
 =head1 ACCESSORS
 
@@ -43,25 +43,25 @@ __PACKAGE__->table("SiteAppsHitsStat");
 =cut
 
 __PACKAGE__->add_columns(
-  "id",
+  'id',
   {
-    data_type => "integer",
+    data_type => 'integer',
     extra => { unsigned => 1 },
     is_auto_increment => 1,
     is_nullable => 0,
   },
-  "name",
-  { data_type => "varchar", default_value => "", is_nullable => 0, size => 255 },
-  "count",
+  'name',
+  { data_type => 'varchar', default_value => '', is_nullable => 0, size => 255 },
+  'count',
   {
-    data_type => "bigint",
+    data_type => 'bigint',
     default_value => 0,
     extra => { unsigned => 1 },
     is_nullable => 0,
   },
 );
-__PACKAGE__->set_primary_key("id");
-__PACKAGE__->add_unique_constraint("name", ["name"]);
+__PACKAGE__->set_primary_key('id');
+__PACKAGE__->add_unique_constraint('name', ['name']);
 
 
 # Created by DBIx::Class::Schema::Loader v0.07010 @ 2011-09-07 01:57:16

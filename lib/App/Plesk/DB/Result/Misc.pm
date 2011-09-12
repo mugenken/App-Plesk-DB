@@ -15,7 +15,7 @@ App::Plesk::DB::Result::Misc
 
 =cut
 
-__PACKAGE__->table("misc");
+__PACKAGE__->table('misc');
 
 =head1 ACCESSORS
 
@@ -34,12 +34,12 @@ __PACKAGE__->table("misc");
 =cut
 
 __PACKAGE__->add_columns(
-  "param",
-  { data_type => "varchar", is_nullable => 0, size => 255 },
-  "val",
-  { data_type => "varbinary", is_nullable => 0, size => 255 },
+  'param',
+  { data_type => 'varchar', is_nullable => 0, size => 255 },
+  'val',
+  { data_type => 'varbinary', is_nullable => 0, size => 255 },
 );
-__PACKAGE__->set_primary_key("param");
+__PACKAGE__->set_primary_key('param');
 
 
 # Created by DBIx::Class::Schema::Loader v0.07010 @ 2011-09-07 01:57:16

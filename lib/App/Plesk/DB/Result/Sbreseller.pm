@@ -15,7 +15,7 @@ App::Plesk::DB::Result::Sbreseller
 
 =cut
 
-__PACKAGE__->table("SBResellers");
+__PACKAGE__->table('SBResellers');
 
 =head1 ACCESSORS
 
@@ -47,24 +47,24 @@ __PACKAGE__->table("SBResellers");
 =cut
 
 __PACKAGE__->add_columns(
-  "id",
+  'id',
   {
-    data_type => "integer",
+    data_type => 'integer',
     extra => { unsigned => 1 },
     is_auto_increment => 1,
     is_nullable => 0,
   },
-  "client_id",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 0 },
-  "sb_client_login",
-  { data_type => "varchar", is_nullable => 0, size => 255 },
-  "sb_reseller_id",
-  { data_type => "varchar", is_nullable => 0, size => 255 },
+  'client_id',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 0 },
+  'sb_client_login',
+  { data_type => 'varchar', is_nullable => 0, size => 255 },
+  'sb_reseller_id',
+  { data_type => 'varchar', is_nullable => 0, size => 255 },
 );
-__PACKAGE__->set_primary_key("id");
-__PACKAGE__->add_unique_constraint("sb_reseller_id", ["sb_reseller_id"]);
-__PACKAGE__->add_unique_constraint("sb_client_login", ["sb_client_login"]);
-__PACKAGE__->add_unique_constraint("client_id", ["client_id"]);
+__PACKAGE__->set_primary_key('id');
+__PACKAGE__->add_unique_constraint('sb_reseller_id', ['sb_reseller_id']);
+__PACKAGE__->add_unique_constraint('sb_client_login', ['sb_client_login']);
+__PACKAGE__->add_unique_constraint('client_id', ['client_id']);
 
 
 # Created by DBIx::Class::Schema::Loader v0.07010 @ 2011-09-07 01:57:16

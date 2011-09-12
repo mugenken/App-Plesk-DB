@@ -15,7 +15,7 @@ App::Plesk::DB::Result::Logo
 
 =cut
 
-__PACKAGE__->table("Logos");
+__PACKAGE__->table('Logos');
 
 =head1 ACCESSORS
 
@@ -47,21 +47,21 @@ __PACKAGE__->table("Logos");
 =cut
 
 __PACKAGE__->add_columns(
-  "id",
+  'id',
   {
-    data_type => "integer",
+    data_type => 'integer',
     extra => { unsigned => 1 },
     is_auto_increment => 1,
     is_nullable => 0,
   },
-  "name",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "fake",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "url",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
+  'name',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'fake',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'url',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
 );
-__PACKAGE__->set_primary_key("id");
+__PACKAGE__->set_primary_key('id');
 
 
 # Created by DBIx::Class::Schema::Loader v0.07010 @ 2011-09-07 01:57:16

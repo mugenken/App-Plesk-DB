@@ -15,7 +15,7 @@ App::Plesk::DB::Result::ApsapplicationItem
 
 =cut
 
-__PACKAGE__->table("APSApplicationItems");
+__PACKAGE__->table('APSApplicationItems');
 
 =head1 ACCESSORS
 
@@ -43,52 +43,52 @@ __PACKAGE__->table("APSApplicationItems");
 
   data_type: 'enum'
   default_value: 'false'
-  extra: {list => ["false","true"]}
+  extra: {list => ['false','true']}
   is_nullable: 0
 
 =head2 disabled
 
   data_type: 'enum'
   default_value: 'false'
-  extra: {list => ["false","true"]}
+  extra: {list => ['false','true']}
   is_nullable: 0
 
 =cut
 
 __PACKAGE__->add_columns(
-  "id",
+  'id',
   {
-    data_type => "integer",
+    data_type => 'integer',
     extra => { unsigned => 1 },
     is_auto_increment => 1,
     is_nullable => 0,
   },
-  "license_type_id",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 0 },
-  "pkg_id",
+  'license_type_id',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 0 },
+  'pkg_id',
   {
-    data_type => "integer",
+    data_type => 'integer',
     default_value => 0,
     extra => { unsigned => 1 },
     is_nullable => 0,
   },
-  "shared",
+  'shared',
   {
-    data_type => "enum",
-    default_value => "false",
-    extra => { list => ["false", "true"] },
+    data_type => 'enum',
+    default_value => 'false',
+    extra => { list => ['false', 'true'] },
     is_nullable => 0,
   },
-  "disabled",
+  'disabled',
   {
-    data_type => "enum",
-    default_value => "false",
-    extra => { list => ["false", "true"] },
+    data_type => 'enum',
+    default_value => 'false',
+    extra => { list => ['false', 'true'] },
     is_nullable => 0,
   },
 );
-__PACKAGE__->set_primary_key("id");
-__PACKAGE__->add_unique_constraint("license_type_id", ["license_type_id", "pkg_id"]);
+__PACKAGE__->set_primary_key('id');
+__PACKAGE__->add_unique_constraint('license_type_id', ['license_type_id', 'pkg_id']);
 
 
 # Created by DBIx::Class::Schema::Loader v0.07010 @ 2011-09-07 01:57:16

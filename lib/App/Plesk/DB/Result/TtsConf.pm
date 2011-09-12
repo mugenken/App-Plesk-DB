@@ -15,7 +15,7 @@ App::Plesk::DB::Result::TtsConf
 
 =cut
 
-__PACKAGE__->table("tts_conf");
+__PACKAGE__->table('tts_conf');
 
 =head1 ACCESSORS
 
@@ -29,14 +29,14 @@ __PACKAGE__->table("tts_conf");
 
   data_type: 'enum'
   default_value: 'false'
-  extra: {list => ["false","true"]}
+  extra: {list => ['false','true']}
   is_nullable: 0
 
 =head2 can_post
 
   data_type: 'enum'
   default_value: 'false'
-  extra: {list => ["false","true"]}
+  extra: {list => ['false','true']}
   is_nullable: 0
 
 =head2 def_qu_id
@@ -61,7 +61,7 @@ __PACKAGE__->table("tts_conf");
 
   data_type: 'enum'
   default_value: 'false'
-  extra: {list => ["false","true"]}
+  extra: {list => ['false','true']}
   is_nullable: 0
 
 =head2 email_address
@@ -109,51 +109,51 @@ __PACKAGE__->table("tts_conf");
 =cut
 
 __PACKAGE__->add_columns(
-  "id",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 0 },
-  "enabled",
+  'id',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 0 },
+  'enabled',
   {
-    data_type => "enum",
-    default_value => "false",
-    extra => { list => ["false", "true"] },
+    data_type => 'enum',
+    default_value => 'false',
+    extra => { list => ['false', 'true'] },
     is_nullable => 0,
   },
-  "can_post",
+  'can_post',
   {
-    data_type => "enum",
-    default_value => "false",
-    extra => { list => ["false", "true"] },
+    data_type => 'enum',
+    default_value => 'false',
+    extra => { list => ['false', 'true'] },
     is_nullable => 0,
   },
-  "def_qu_id",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 0 },
-  "def_pr_id",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 0 },
-  "def_cat_id",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 0 },
-  "mg_enabled",
+  'def_qu_id',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 0 },
+  'def_pr_id',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 0 },
+  'def_cat_id',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 0 },
+  'mg_enabled',
   {
-    data_type => "enum",
-    default_value => "false",
-    extra => { list => ["false", "true"] },
+    data_type => 'enum',
+    default_value => 'false',
+    extra => { list => ['false', 'true'] },
     is_nullable => 0,
   },
-  "email_address",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "email_name",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "pop_server",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "pop_username",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "pop_password",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "query_period",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 1 },
-  "start_ticket_subj",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
+  'email_address',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'email_name',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'pop_server',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'pop_username',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'pop_password',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'query_period',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 1 },
+  'start_ticket_subj',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
 );
-__PACKAGE__->set_primary_key("id");
+__PACKAGE__->set_primary_key('id');
 
 
 # Created by DBIx::Class::Schema::Loader v0.07010 @ 2011-09-07 01:57:16

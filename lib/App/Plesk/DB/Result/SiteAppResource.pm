@@ -15,7 +15,7 @@ App::Plesk::DB::Result::SiteAppResource
 
 =cut
 
-__PACKAGE__->table("SiteAppResources");
+__PACKAGE__->table('SiteAppResources');
 
 =head1 ACCESSORS
 
@@ -29,7 +29,7 @@ __PACKAGE__->table("SiteAppResources");
 
   data_type: 'enum'
   default_value: 'database'
-  extra: {list => ["database","dbuser","custom_button"]}
+  extra: {list => ['database','dbuser','custom_button']}
   is_nullable: 0
 
 =head2 res_id
@@ -48,21 +48,21 @@ __PACKAGE__->table("SiteAppResources");
 =cut
 
 __PACKAGE__->add_columns(
-  "app_id",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 0 },
-  "type",
+  'app_id',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 0 },
+  'type',
   {
-    data_type => "enum",
-    default_value => "database",
-    extra => { list => ["database", "dbuser", "custom_button"] },
+    data_type => 'enum',
+    default_value => 'database',
+    extra => { list => ['database', 'dbuser', 'custom_button'] },
     is_nullable => 0,
   },
-  "res_id",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 0 },
-  "res_param_1",
-  { data_type => "varchar", default_value => "", is_nullable => 1, size => 255 },
+  'res_id',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 0 },
+  'res_param_1',
+  { data_type => 'varchar', default_value => '', is_nullable => 1, size => 255 },
 );
-__PACKAGE__->add_unique_constraint("type", ["type", "res_id"]);
+__PACKAGE__->add_unique_constraint('type', ['type', 'res_id']);
 
 
 # Created by DBIx::Class::Schema::Loader v0.07010 @ 2011-09-07 01:57:16

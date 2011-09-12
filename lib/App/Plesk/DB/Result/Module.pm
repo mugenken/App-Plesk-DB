@@ -15,7 +15,7 @@ App::Plesk::DB::Result::Module
 
 =cut
 
-__PACKAGE__->table("Modules");
+__PACKAGE__->table('Modules');
 
 =head1 ACCESSORS
 
@@ -71,30 +71,30 @@ __PACKAGE__->table("Modules");
 =cut
 
 __PACKAGE__->add_columns(
-  "id",
+  'id',
   {
-    data_type => "integer",
+    data_type => 'integer',
     extra => { unsigned => 1 },
     is_auto_increment => 1,
     is_nullable => 0,
   },
-  "name",
-  { data_type => "varchar", is_nullable => 0, size => 255 },
-  "packname",
-  { data_type => "varchar", is_nullable => 0, size => 255 },
-  "display_name",
-  { data_type => "varchar", is_nullable => 0, size => 255 },
-  "version",
-  { data_type => "varchar", is_nullable => 0, size => 30 },
-  "release",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 0 },
-  "description",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "icon",
-  { data_type => "varchar", is_nullable => 0, size => 255 },
+  'name',
+  { data_type => 'varchar', is_nullable => 0, size => 255 },
+  'packname',
+  { data_type => 'varchar', is_nullable => 0, size => 255 },
+  'display_name',
+  { data_type => 'varchar', is_nullable => 0, size => 255 },
+  'version',
+  { data_type => 'varchar', is_nullable => 0, size => 30 },
+  'release',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 0 },
+  'description',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'icon',
+  { data_type => 'varchar', is_nullable => 0, size => 255 },
 );
-__PACKAGE__->set_primary_key("id");
-__PACKAGE__->add_unique_constraint("name", ["name"]);
+__PACKAGE__->set_primary_key('id');
+__PACKAGE__->add_unique_constraint('name', ['name']);
 
 
 # Created by DBIx::Class::Schema::Loader v0.07010 @ 2011-09-07 01:57:16

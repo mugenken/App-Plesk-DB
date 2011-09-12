@@ -15,7 +15,7 @@ App::Plesk::DB::Result::DataBase
 
 =cut
 
-__PACKAGE__->table("data_bases");
+__PACKAGE__->table('data_bases');
 
 =head1 ACCESSORS
 
@@ -36,7 +36,7 @@ __PACKAGE__->table("data_bases");
 
   data_type: 'enum'
   default_value: 'mysql'
-  extra: {list => ["mysql","postgresql","mssql"]}
+  extra: {list => ['mysql','postgresql','mssql']}
   is_nullable: 0
 
 =head2 dom_id
@@ -60,31 +60,31 @@ __PACKAGE__->table("data_bases");
 =cut
 
 __PACKAGE__->add_columns(
-  "id",
+  'id',
   {
-    data_type => "integer",
+    data_type => 'integer',
     extra => { unsigned => 1 },
     is_auto_increment => 1,
     is_nullable => 0,
   },
-  "name",
-  { data_type => "varchar", is_nullable => 0, size => 63 },
-  "type",
+  'name',
+  { data_type => 'varchar', is_nullable => 0, size => 63 },
+  'type',
   {
-    data_type => "enum",
-    default_value => "mysql",
-    extra => { list => ["mysql", "postgresql", "mssql"] },
+    data_type => 'enum',
+    default_value => 'mysql',
+    extra => { list => ['mysql', 'postgresql', 'mssql'] },
     is_nullable => 0,
   },
-  "dom_id",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 0 },
-  "db_server_id",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 0 },
-  "default_user_id",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 1 },
+  'dom_id',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 0 },
+  'db_server_id',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 0 },
+  'default_user_id',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 1 },
 );
-__PACKAGE__->set_primary_key("id");
-__PACKAGE__->add_unique_constraint("name", ["name", "db_server_id"]);
+__PACKAGE__->set_primary_key('id');
+__PACKAGE__->add_unique_constraint('name', ['name', 'db_server_id']);
 
 
 # Created by DBIx::Class::Schema::Loader v0.07010 @ 2011-09-07 01:57:16

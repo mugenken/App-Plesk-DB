@@ -15,7 +15,7 @@ App::Plesk::DB::Result::UpgradeHistory
 
 =cut
 
-__PACKAGE__->table("upgrade_history");
+__PACKAGE__->table('upgrade_history');
 
 =head1 ACCESSORS
 
@@ -40,18 +40,18 @@ __PACKAGE__->table("upgrade_history");
 =cut
 
 __PACKAGE__->add_columns(
-  "upgrade_date",
+  'upgrade_date',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 0,
   },
-  "version_info",
-  { data_type => "varchar", is_nullable => 0, size => 50 },
-  "db_version",
-  { data_type => "varchar", is_nullable => 0, size => 8 },
+  'version_info',
+  { data_type => 'varchar', is_nullable => 0, size => 50 },
+  'db_version',
+  { data_type => 'varchar', is_nullable => 0, size => 8 },
 );
-__PACKAGE__->set_primary_key("upgrade_date");
+__PACKAGE__->set_primary_key('upgrade_date');
 
 
 # Created by DBIx::Class::Schema::Loader v0.07010 @ 2011-09-07 01:57:16

@@ -15,7 +15,7 @@ App::Plesk::DB::Result::SiteApp
 
 =cut
 
-__PACKAGE__->table("SiteApps");
+__PACKAGE__->table('SiteApps');
 
 =head1 ACCESSORS
 
@@ -42,7 +42,7 @@ __PACKAGE__->table("SiteApps");
 
   data_type: 'enum'
   default_value: 'domain'
-  extra: {list => ["domain","subdomain"]}
+  extra: {list => ['domain','subdomain']}
   is_nullable: 0
 
 =head2 install_prefix
@@ -55,7 +55,7 @@ __PACKAGE__->table("SiteApps");
 
   data_type: 'enum'
   default_value: 'httpdocs'
-  extra: {list => ["httpdocs","httpsdocs"]}
+  extra: {list => ['httpdocs','httpsdocs']}
   is_nullable: 0
 
 =head2 capp_item_id
@@ -79,41 +79,41 @@ __PACKAGE__->table("SiteApps");
 =cut
 
 __PACKAGE__->add_columns(
-  "id",
+  'id',
   {
-    data_type => "integer",
+    data_type => 'integer',
     extra => { unsigned => 1 },
     is_auto_increment => 1,
     is_nullable => 0,
   },
-  "app_release",
-  { data_type => "varchar", is_nullable => 0, size => 30 },
-  "dom_id",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 0 },
-  "dom_type",
+  'app_release',
+  { data_type => 'varchar', is_nullable => 0, size => 30 },
+  'dom_id',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 0 },
+  'dom_type',
   {
-    data_type => "enum",
-    default_value => "domain",
-    extra => { list => ["domain", "subdomain"] },
+    data_type => 'enum',
+    default_value => 'domain',
+    extra => { list => ['domain', 'subdomain'] },
     is_nullable => 0,
   },
-  "install_prefix",
-  { data_type => "varchar", is_nullable => 0, size => 255 },
-  "htdocs_directory",
+  'install_prefix',
+  { data_type => 'varchar', is_nullable => 0, size => 255 },
+  'htdocs_directory',
   {
-    data_type => "enum",
-    default_value => "httpdocs",
-    extra => { list => ["httpdocs", "httpsdocs"] },
+    data_type => 'enum',
+    default_value => 'httpdocs',
+    extra => { list => ['httpdocs', 'httpsdocs'] },
     is_nullable => 0,
   },
-  "capp_item_id",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 0 },
-  "params_id",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 1 },
-  "license_id",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 1 },
+  'capp_item_id',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 0 },
+  'params_id',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 1 },
+  'license_id',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 1 },
 );
-__PACKAGE__->set_primary_key("id");
+__PACKAGE__->set_primary_key('id');
 
 
 # Created by DBIx::Class::Schema::Loader v0.07010 @ 2011-09-07 01:57:16

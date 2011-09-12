@@ -15,7 +15,7 @@ App::Plesk::DB::Result::Component
 
 =cut
 
-__PACKAGE__->table("Components");
+__PACKAGE__->table('Components');
 
 =head1 ACCESSORS
 
@@ -34,12 +34,12 @@ __PACKAGE__->table("Components");
 =cut
 
 __PACKAGE__->add_columns(
-  "name",
-  { data_type => "varchar", is_nullable => 0, size => 255 },
-  "version",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
+  'name',
+  { data_type => 'varchar', is_nullable => 0, size => 255 },
+  'version',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
 );
-__PACKAGE__->set_primary_key("name");
+__PACKAGE__->set_primary_key('name');
 
 
 # Created by DBIx::Class::Schema::Loader v0.07010 @ 2011-09-07 01:57:16

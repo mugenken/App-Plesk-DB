@@ -15,7 +15,7 @@ App::Plesk::DB::Result::DomLevelUsr
 
 =cut
 
-__PACKAGE__->table("dom_level_usrs");
+__PACKAGE__->table('dom_level_usrs');
 
 =head1 ACCESSORS
 
@@ -35,7 +35,7 @@ __PACKAGE__->table("dom_level_usrs");
 
   data_type: 'enum'
   default_value: 'false'
-  extra: {list => ["false","true"]}
+  extra: {list => ['false','true']}
   is_nullable: 0
 
 =head2 card_id
@@ -53,23 +53,23 @@ __PACKAGE__->table("dom_level_usrs");
 =cut
 
 __PACKAGE__->add_columns(
-  "dom_id",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 0 },
-  "account_id",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 1 },
-  "state",
+  'dom_id',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 0 },
+  'account_id',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 1 },
+  'state',
   {
-    data_type => "enum",
-    default_value => "false",
-    extra => { list => ["false", "true"] },
+    data_type => 'enum',
+    default_value => 'false',
+    extra => { list => ['false', 'true'] },
     is_nullable => 0,
   },
-  "card_id",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 1 },
-  "perm_id",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 1 },
+  'card_id',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 1 },
+  'perm_id',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 1 },
 );
-__PACKAGE__->set_primary_key("dom_id");
+__PACKAGE__->set_primary_key('dom_id');
 
 
 # Created by DBIx::Class::Schema::Loader v0.07010 @ 2011-09-07 01:57:16

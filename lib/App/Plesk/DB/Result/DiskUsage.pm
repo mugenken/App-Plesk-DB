@@ -15,7 +15,7 @@ App::Plesk::DB::Result::DiskUsage
 
 =cut
 
-__PACKAGE__->table("disk_usage");
+__PACKAGE__->table('disk_usage');
 
 =head1 ACCESSORS
 
@@ -119,101 +119,101 @@ __PACKAGE__->table("disk_usage");
 =cut
 
 __PACKAGE__->add_columns(
-  "dom_id",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 0 },
-  "httpdocs",
+  'dom_id',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 0 },
+  'httpdocs',
   {
-    data_type => "bigint",
+    data_type => 'bigint',
     default_value => 0,
     extra => { unsigned => 1 },
     is_nullable => 1,
   },
-  "httpsdocs",
+  'httpsdocs',
   {
-    data_type => "bigint",
+    data_type => 'bigint',
     default_value => 0,
     extra => { unsigned => 1 },
     is_nullable => 1,
   },
-  "subdomains",
+  'subdomains',
   {
-    data_type => "bigint",
+    data_type => 'bigint',
     default_value => 0,
     extra => { unsigned => 1 },
     is_nullable => 1,
   },
-  "web_users",
+  'web_users',
   {
-    data_type => "bigint",
+    data_type => 'bigint',
     default_value => 0,
     extra => { unsigned => 1 },
     is_nullable => 1,
   },
-  "anonftp",
+  'anonftp',
   {
-    data_type => "bigint",
+    data_type => 'bigint',
     default_value => 0,
     extra => { unsigned => 1 },
     is_nullable => 1,
   },
-  "logs",
+  'logs',
   {
-    data_type => "bigint",
+    data_type => 'bigint',
     default_value => 0,
     extra => { unsigned => 1 },
     is_nullable => 1,
   },
-  "dbases",
+  'dbases',
   {
-    data_type => "bigint",
+    data_type => 'bigint',
     default_value => 0,
     extra => { unsigned => 1 },
     is_nullable => 1,
   },
-  "mailboxes",
+  'mailboxes',
   {
-    data_type => "bigint",
+    data_type => 'bigint',
     default_value => 0,
     extra => { unsigned => 1 },
     is_nullable => 1,
   },
-  "webapps",
+  'webapps',
   {
-    data_type => "bigint",
+    data_type => 'bigint',
     default_value => 0,
     extra => { unsigned => 1 },
     is_nullable => 1,
   },
-  "maillists",
+  'maillists',
   {
-    data_type => "bigint",
+    data_type => 'bigint',
     default_value => 0,
     extra => { unsigned => 1 },
     is_nullable => 1,
   },
-  "domaindumps",
+  'domaindumps',
   {
-    data_type => "bigint",
+    data_type => 'bigint',
     default_value => 0,
     extra => { unsigned => 1 },
     is_nullable => 1,
   },
-  "configs",
+  'configs',
   {
-    data_type => "bigint",
+    data_type => 'bigint',
     default_value => 0,
     extra => { unsigned => 1 },
     is_nullable => 1,
   },
-  "chroot",
+  'chroot',
   {
-    data_type => "bigint",
+    data_type => 'bigint',
     default_value => 0,
     extra => { unsigned => 1 },
     is_nullable => 1,
   },
 );
-__PACKAGE__->set_primary_key("dom_id");
+__PACKAGE__->set_primary_key('dom_id');
 
 
 # Created by DBIx::Class::Schema::Loader v0.07010 @ 2011-09-07 01:57:16

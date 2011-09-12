@@ -15,7 +15,7 @@ App::Plesk::DB::Result::RespFreq
 
 =cut
 
-__PACKAGE__->table("resp_freq");
+__PACKAGE__->table('resp_freq');
 
 =head1 ACCESSORS
 
@@ -54,29 +54,29 @@ __PACKAGE__->table("resp_freq");
 =cut
 
 __PACKAGE__->add_columns(
-  "id",
+  'id',
   {
-    data_type => "integer",
+    data_type => 'integer',
     extra => { unsigned => 1 },
     is_auto_increment => 1,
     is_nullable => 0,
   },
-  "rn_id",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 0 },
-  "email",
-  { data_type => "varchar", is_nullable => 0, size => 245 },
-  "num",
-  { data_type => "integer", default_value => 0, is_nullable => 1 },
-  "time_resp",
+  'rn_id',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 0 },
+  'email',
+  { data_type => 'varchar', is_nullable => 0, size => 245 },
+  'num',
+  { data_type => 'integer', default_value => 0, is_nullable => 1 },
+  'time_resp',
   {
-    data_type => "timestamp",
+    data_type => 'timestamp',
     datetime_undef_if_invalid => 1,
-    default_value => \"current_timestamp",
+    default_value => \'current_timestamp',
     is_nullable => 0,
   },
 );
-__PACKAGE__->set_primary_key("id");
-__PACKAGE__->add_unique_constraint("rn_id", ["rn_id", "email"]);
+__PACKAGE__->set_primary_key('id');
+__PACKAGE__->add_unique_constraint('rn_id', ['rn_id', 'email']);
 
 
 # Created by DBIx::Class::Schema::Loader v0.07010 @ 2011-09-07 01:57:16

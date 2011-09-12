@@ -15,7 +15,7 @@ App::Plesk::DB::Result::KeyHistory
 
 =cut
 
-__PACKAGE__->table("key_history");
+__PACKAGE__->table('key_history');
 
 =head1 ACCESSORS
 
@@ -55,7 +55,7 @@ __PACKAGE__->table("key_history");
 
   data_type: 'enum'
   default_value: 'false'
-  extra: {list => ["false","true"]}
+  extra: {list => ['false','true']}
   is_nullable: 0
 
 =head2 options
@@ -67,37 +67,37 @@ __PACKAGE__->table("key_history");
 =cut
 
 __PACKAGE__->add_columns(
-  "id",
+  'id',
   {
-    data_type => "integer",
+    data_type => 'integer',
     extra => { unsigned => 1 },
     is_auto_increment => 1,
     is_nullable => 0,
   },
-  "plesk_key_id",
-  { data_type => "varchar", is_nullable => 1, size => 63 },
-  "name",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "filename",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "register_date",
+  'plesk_key_id',
+  { data_type => 'varchar', is_nullable => 1, size => 63 },
+  'name',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'filename',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'register_date',
   {
-    data_type => "timestamp",
+    data_type => 'timestamp',
     datetime_undef_if_invalid => 1,
-    default_value => \"current_timestamp",
+    default_value => \'current_timestamp',
     is_nullable => 0,
   },
-  "update_disabled",
+  'update_disabled',
   {
-    data_type => "enum",
-    default_value => "false",
-    extra => { list => ["false", "true"] },
+    data_type => 'enum',
+    default_value => 'false',
+    extra => { list => ['false', 'true'] },
     is_nullable => 0,
   },
-  "options",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
+  'options',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
 );
-__PACKAGE__->set_primary_key("id");
+__PACKAGE__->set_primary_key('id');
 
 
 # Created by DBIx::Class::Schema::Loader v0.07010 @ 2011-09-07 01:57:16

@@ -15,7 +15,7 @@ App::Plesk::DB::Result::ModuleFirewallObject
 
 =cut
 
-__PACKAGE__->table("module_firewall_objects");
+__PACKAGE__->table('module_firewall_objects');
 
 =head1 ACCESSORS
 
@@ -40,20 +40,20 @@ __PACKAGE__->table("module_firewall_objects");
 =cut
 
 __PACKAGE__->add_columns(
-  "id",
+  'id',
   {
-    data_type => "integer",
+    data_type => 'integer',
     extra => { unsigned => 1 },
     is_auto_increment => 1,
     is_nullable => 0,
   },
-  "tag",
-  { data_type => "varbinary", is_nullable => 0, size => 255 },
-  "object",
-  { data_type => "blob", is_nullable => 0 },
+  'tag',
+  { data_type => 'varbinary', is_nullable => 0, size => 255 },
+  'object',
+  { data_type => 'blob', is_nullable => 0 },
 );
-__PACKAGE__->set_primary_key("id");
-__PACKAGE__->add_unique_constraint("tag", ["tag"]);
+__PACKAGE__->set_primary_key('id');
+__PACKAGE__->add_unique_constraint('tag', ['tag']);
 
 
 # Created by DBIx::Class::Schema::Loader v0.07010 @ 2011-09-07 01:57:16

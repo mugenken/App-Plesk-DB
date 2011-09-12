@@ -15,7 +15,7 @@ App::Plesk::DB::Result::SecretKey
 
 =cut
 
-__PACKAGE__->table("secret_keys");
+__PACKAGE__->table('secret_keys');
 
 =head1 ACCESSORS
 
@@ -40,12 +40,12 @@ __PACKAGE__->table("secret_keys");
 =cut
 
 __PACKAGE__->add_columns(
-  "key_id",
-  { data_type => "varchar", is_nullable => 0, size => 255 },
-  "ip_address",
-  { data_type => "varchar", is_nullable => 0, size => 15 },
-  "description",
-  { data_type => "varchar", is_nullable => 0, size => 255 },
+  'key_id',
+  { data_type => 'varchar', is_nullable => 0, size => 255 },
+  'ip_address',
+  { data_type => 'varchar', is_nullable => 0, size => 15 },
+  'description',
+  { data_type => 'varchar', is_nullable => 0, size => 255 },
 );
 
 

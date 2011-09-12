@@ -15,7 +15,7 @@ App::Plesk::DB::Result::SmtpPoplock
 
 =cut
 
-__PACKAGE__->table("smtp_poplocks");
+__PACKAGE__->table('smtp_poplocks');
 
 =head1 ACCESSORS
 
@@ -41,18 +41,18 @@ __PACKAGE__->table("smtp_poplocks");
 =cut
 
 __PACKAGE__->add_columns(
-  "ip_address",
-  { data_type => "varchar", is_nullable => 0, size => 15 },
-  "ip_mask",
+  'ip_address',
+  { data_type => 'varchar', is_nullable => 0, size => 15 },
+  'ip_mask',
   {
-    data_type => "integer",
+    data_type => 'integer',
     default_value => 32,
     extra => { unsigned => 1 },
     is_nullable => 0,
   },
-  "lock_time",
+  'lock_time',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 1,
   },

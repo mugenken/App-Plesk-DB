@@ -15,7 +15,7 @@ App::Plesk::DB::Result::TtsTicketEvent
 
 =cut
 
-__PACKAGE__->table("tts_ticket_events");
+__PACKAGE__->table('tts_ticket_events');
 
 =head1 ACCESSORS
 
@@ -43,7 +43,7 @@ __PACKAGE__->table("tts_ticket_events");
 
   data_type: 'enum'
   default_value: 'false'
-  extra: {list => ["false","true"]}
+  extra: {list => ['false','true']}
   is_nullable: 0
 
 =head2 reporter_id
@@ -66,41 +66,41 @@ __PACKAGE__->table("tts_ticket_events");
 =cut
 
 __PACKAGE__->add_columns(
-  "id",
+  'id',
   {
-    data_type => "integer",
+    data_type => 'integer',
     extra => { unsigned => 1 },
     is_auto_increment => 1,
     is_nullable => 0,
   },
-  "ticket_id",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 0 },
-  "event_type",
+  'ticket_id',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 0 },
+  'event_type',
   {
-    data_type => "bigint",
+    data_type => 'bigint',
     default_value => 0,
     extra => { unsigned => 1 },
     is_nullable => 0,
   },
-  "public",
+  'public',
   {
-    data_type => "enum",
-    default_value => "false",
-    extra => { list => ["false", "true"] },
+    data_type => 'enum',
+    default_value => 'false',
+    extra => { list => ['false', 'true'] },
     is_nullable => 0,
   },
-  "reporter_id",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 0 },
-  "created_date",
+  'reporter_id',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 0 },
+  'created_date',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 1,
   },
-  "descr",
-  { data_type => "text", is_nullable => 0 },
+  'descr',
+  { data_type => 'text', is_nullable => 0 },
 );
-__PACKAGE__->set_primary_key("id");
+__PACKAGE__->set_primary_key('id');
 
 
 # Created by DBIx::Class::Schema::Loader v0.07010 @ 2011-09-07 01:57:16

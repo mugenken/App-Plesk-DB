@@ -15,7 +15,7 @@ App::Plesk::DB::Result::ApsclientApplicationItem
 
 =cut
 
-__PACKAGE__->table("APSClientApplicationItems");
+__PACKAGE__->table('APSClientApplicationItems');
 
 =head1 ACCESSORS
 
@@ -49,32 +49,32 @@ __PACKAGE__->table("APSClientApplicationItems");
 =cut
 
 __PACKAGE__->add_columns(
-  "id",
+  'id',
   {
-    data_type => "integer",
+    data_type => 'integer',
     extra => { unsigned => 1 },
     is_auto_increment => 1,
     is_nullable => 0,
   },
-  "client_id",
+  'client_id',
   {
-    data_type => "integer",
+    data_type => 'integer',
     default_value => 0,
     extra => { unsigned => 1 },
     is_nullable => 0,
   },
-  "app_item_id",
+  'app_item_id',
   {
-    data_type => "integer",
+    data_type => 'integer',
     default_value => 0,
     extra => { unsigned => 1 },
     is_nullable => 0,
   },
-  "instances_limit",
-  { data_type => "integer", default_value => -1, is_nullable => 0 },
+  'instances_limit',
+  { data_type => 'integer', default_value => -1, is_nullable => 0 },
 );
-__PACKAGE__->set_primary_key("id");
-__PACKAGE__->add_unique_constraint("client_id_2", ["client_id", "app_item_id"]);
+__PACKAGE__->set_primary_key('id');
+__PACKAGE__->add_unique_constraint('client_id_2', ['client_id', 'app_item_id']);
 
 
 # Created by DBIx::Class::Schema::Loader v0.07010 @ 2011-09-07 01:57:16

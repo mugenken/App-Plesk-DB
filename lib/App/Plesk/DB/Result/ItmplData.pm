@@ -15,7 +15,7 @@ App::Plesk::DB::Result::ItmplData
 
 =cut
 
-__PACKAGE__->table("itmpl_data");
+__PACKAGE__->table('itmpl_data');
 
 =head1 ACCESSORS
 
@@ -41,41 +41,41 @@ __PACKAGE__->table("itmpl_data");
 
   data_type: 'enum'
   default_value: 'hide'
-  extra: {list => ["hide","adminOnly","show"]}
+  extra: {list => ['hide','adminOnly','show']}
   is_nullable: 0
 
 =head2 control_type
 
   data_type: 'enum'
   default_value: 'button'
-  extra: {list => ["button","formControl"]}
+  extra: {list => ['button','formControl']}
   is_nullable: 0
 
 =cut
 
 __PACKAGE__->add_columns(
-  "itmpl_id",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 0 },
-  "page",
-  { data_type => "varchar", is_nullable => 0, size => 127 },
-  "control",
-  { data_type => "varchar", is_nullable => 0, size => 127 },
-  "state",
+  'itmpl_id',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 0 },
+  'page',
+  { data_type => 'varchar', is_nullable => 0, size => 127 },
+  'control',
+  { data_type => 'varchar', is_nullable => 0, size => 127 },
+  'state',
   {
-    data_type => "enum",
-    default_value => "hide",
-    extra => { list => ["hide", "adminOnly", "show"] },
+    data_type => 'enum',
+    default_value => 'hide',
+    extra => { list => ['hide', 'adminOnly', 'show'] },
     is_nullable => 0,
   },
-  "control_type",
+  'control_type',
   {
-    data_type => "enum",
-    default_value => "button",
-    extra => { list => ["button", "formControl"] },
+    data_type => 'enum',
+    default_value => 'button',
+    extra => { list => ['button', 'formControl'] },
     is_nullable => 0,
   },
 );
-__PACKAGE__->set_primary_key("itmpl_id", "page", "control");
+__PACKAGE__->set_primary_key('itmpl_id', 'page', 'control');
 
 
 # Created by DBIx::Class::Schema::Loader v0.07010 @ 2011-09-07 01:57:16

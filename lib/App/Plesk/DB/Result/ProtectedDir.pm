@@ -15,7 +15,7 @@ App::Plesk::DB::Result::ProtectedDir
 
 =cut
 
-__PACKAGE__->table("protected_dirs");
+__PACKAGE__->table('protected_dirs');
 
 =head1 ACCESSORS
 
@@ -30,21 +30,21 @@ __PACKAGE__->table("protected_dirs");
 
   data_type: 'enum'
   default_value: 'false'
-  extra: {list => ["false","true"]}
+  extra: {list => ['false','true']}
   is_nullable: 0
 
 =head2 ssl
 
   data_type: 'enum'
   default_value: 'false'
-  extra: {list => ["false","true"]}
+  extra: {list => ['false','true']}
   is_nullable: 0
 
 =head2 cgi_bin
 
   data_type: 'enum'
   default_value: 'false'
-  extra: {list => ["false","true"]}
+  extra: {list => ['false','true']}
   is_nullable: 0
 
 =head2 realm
@@ -68,43 +68,43 @@ __PACKAGE__->table("protected_dirs");
 =cut
 
 __PACKAGE__->add_columns(
-  "id",
+  'id',
   {
-    data_type => "integer",
+    data_type => 'integer',
     extra => { unsigned => 1 },
     is_auto_increment => 1,
     is_nullable => 0,
   },
-  "non_ssl",
+  'non_ssl',
   {
-    data_type => "enum",
-    default_value => "false",
-    extra => { list => ["false", "true"] },
+    data_type => 'enum',
+    default_value => 'false',
+    extra => { list => ['false', 'true'] },
     is_nullable => 0,
   },
-  "ssl",
+  'ssl',
   {
-    data_type => "enum",
-    default_value => "false",
-    extra => { list => ["false", "true"] },
+    data_type => 'enum',
+    default_value => 'false',
+    extra => { list => ['false', 'true'] },
     is_nullable => 0,
   },
-  "cgi_bin",
+  'cgi_bin',
   {
-    data_type => "enum",
-    default_value => "false",
-    extra => { list => ["false", "true"] },
+    data_type => 'enum',
+    default_value => 'false',
+    extra => { list => ['false', 'true'] },
     is_nullable => 0,
   },
-  "realm",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "path",
-  { data_type => "varchar", is_nullable => 0, size => 245 },
-  "dom_id",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 0 },
+  'realm',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'path',
+  { data_type => 'varchar', is_nullable => 0, size => 245 },
+  'dom_id',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 0 },
 );
-__PACKAGE__->set_primary_key("id");
-__PACKAGE__->add_unique_constraint("dom_id", ["dom_id", "path"]);
+__PACKAGE__->set_primary_key('id');
+__PACKAGE__->add_unique_constraint('dom_id', ['dom_id', 'path']);
 
 
 # Created by DBIx::Class::Schema::Loader v0.07010 @ 2011-09-07 01:57:16

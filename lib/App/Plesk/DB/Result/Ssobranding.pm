@@ -15,7 +15,7 @@ App::Plesk::DB::Result::Ssobranding
 
 =cut
 
-__PACKAGE__->table("SSOBranding");
+__PACKAGE__->table('SSOBranding');
 
 =head1 ACCESSORS
 
@@ -34,12 +34,12 @@ __PACKAGE__->table("SSOBranding");
 =cut
 
 __PACKAGE__->add_columns(
-  "http_request_domain",
-  { data_type => "varchar", is_nullable => 0, size => 255 },
-  "idp_url",
-  { data_type => "varchar", is_nullable => 0, size => 255 },
+  'http_request_domain',
+  { data_type => 'varchar', is_nullable => 0, size => 255 },
+  'idp_url',
+  { data_type => 'varchar', is_nullable => 0, size => 255 },
 );
-__PACKAGE__->set_primary_key("http_request_domain");
+__PACKAGE__->set_primary_key('http_request_domain');
 
 
 # Created by DBIx::Class::Schema::Loader v0.07010 @ 2011-09-07 01:57:16

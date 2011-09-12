@@ -15,7 +15,7 @@ App::Plesk::DB::Result::SpamfilterPreference
 
 =cut
 
-__PACKAGE__->table("spamfilter_preferences");
+__PACKAGE__->table('spamfilter_preferences');
 
 =head1 ACCESSORS
 
@@ -49,21 +49,21 @@ __PACKAGE__->table("spamfilter_preferences");
 =cut
 
 __PACKAGE__->add_columns(
-  "prefid",
+  'prefid',
   {
-    data_type => "integer",
+    data_type => 'integer',
     extra => { unsigned => 1 },
     is_auto_increment => 1,
     is_nullable => 0,
   },
-  "spamfilter_id",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 0 },
-  "preference",
-  { data_type => "varchar", default_value => "", is_nullable => 0, size => 30 },
-  "value",
-  { data_type => "varchar", default_value => "", is_nullable => 0, size => 255 },
+  'spamfilter_id',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 0 },
+  'preference',
+  { data_type => 'varchar', default_value => '', is_nullable => 0, size => 30 },
+  'value',
+  { data_type => 'varchar', default_value => '', is_nullable => 0, size => 255 },
 );
-__PACKAGE__->set_primary_key("prefid");
+__PACKAGE__->set_primary_key('prefid');
 
 
 # Created by DBIx::Class::Schema::Loader v0.07010 @ 2011-09-07 01:57:16

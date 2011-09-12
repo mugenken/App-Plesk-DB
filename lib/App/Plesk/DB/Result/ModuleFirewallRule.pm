@@ -15,7 +15,7 @@ App::Plesk::DB::Result::ModuleFirewallRule
 
 =cut
 
-__PACKAGE__->table("module_firewall_rules");
+__PACKAGE__->table('module_firewall_rules');
 
 =head1 ACCESSORS
 
@@ -52,26 +52,26 @@ __PACKAGE__->table("module_firewall_rules");
 =cut
 
 __PACKAGE__->add_columns(
-  "id",
+  'id',
   {
-    data_type => "integer",
+    data_type => 'integer',
     extra => { unsigned => 1 },
     is_auto_increment => 1,
     is_nullable => 0,
   },
-  "configuration_id",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 0 },
-  "direction",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 0 },
-  "priority",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 0 },
-  "object",
-  { data_type => "blob", is_nullable => 0 },
+  'configuration_id',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 0 },
+  'direction',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 0 },
+  'priority',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 0 },
+  'object',
+  { data_type => 'blob', is_nullable => 0 },
 );
-__PACKAGE__->set_primary_key("id");
+__PACKAGE__->set_primary_key('id');
 __PACKAGE__->add_unique_constraint(
-  "configuration_id",
-  ["configuration_id", "direction", "priority"],
+  'configuration_id',
+  ['configuration_id', 'direction', 'priority'],
 );
 
 

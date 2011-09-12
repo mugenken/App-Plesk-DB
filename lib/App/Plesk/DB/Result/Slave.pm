@@ -15,7 +15,7 @@ App::Plesk::DB::Result::Slave
 
 =cut
 
-__PACKAGE__->table("slaves");
+__PACKAGE__->table('slaves');
 
 =head1 ACCESSORS
 
@@ -35,18 +35,18 @@ __PACKAGE__->table("slaves");
 =cut
 
 __PACKAGE__->add_columns(
-  "id",
+  'id',
   {
-    data_type => "integer",
+    data_type => 'integer',
     extra => { unsigned => 1 },
     is_auto_increment => 1,
     is_nullable => 0,
   },
-  "hostname",
-  { data_type => "varchar", is_nullable => 0, size => 255 },
+  'hostname',
+  { data_type => 'varchar', is_nullable => 0, size => 255 },
 );
-__PACKAGE__->set_primary_key("id");
-__PACKAGE__->add_unique_constraint("hostname", ["hostname"]);
+__PACKAGE__->set_primary_key('id');
+__PACKAGE__->add_unique_constraint('hostname', ['hostname']);
 
 
 # Created by DBIx::Class::Schema::Loader v0.07010 @ 2011-09-07 01:57:16

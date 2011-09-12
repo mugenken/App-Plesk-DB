@@ -15,7 +15,7 @@ App::Plesk::DB::Result::Repository
 
 =cut
 
-__PACKAGE__->table("Repository");
+__PACKAGE__->table('Repository');
 
 =head1 ACCESSORS
 
@@ -35,17 +35,17 @@ __PACKAGE__->table("Repository");
 =cut
 
 __PACKAGE__->add_columns(
-  "rep_id",
+  'rep_id',
   {
-    data_type => "integer",
+    data_type => 'integer',
     extra => { unsigned => 1 },
     is_auto_increment => 1,
     is_nullable => 0,
   },
-  "component_id",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 0 },
+  'component_id',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 0 },
 );
-__PACKAGE__->set_primary_key("rep_id", "component_id");
+__PACKAGE__->set_primary_key('rep_id', 'component_id');
 
 
 # Created by DBIx::Class::Schema::Loader v0.07010 @ 2011-09-07 01:57:16

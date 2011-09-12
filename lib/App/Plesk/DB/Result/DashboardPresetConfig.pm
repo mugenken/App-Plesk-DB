@@ -15,7 +15,7 @@ App::Plesk::DB::Result::DashboardPresetConfig
 
 =cut
 
-__PACKAGE__->table("DashboardPresetConfig");
+__PACKAGE__->table('DashboardPresetConfig');
 
 =head1 ACCESSORS
 
@@ -54,7 +54,7 @@ __PACKAGE__->table("DashboardPresetConfig");
 
   data_type: 'enum'
   default_value: 'none'
-  extra: {list => ["none","button","custom-buttons","column","footer","indicator","left","right","section","shortcut","tab","tabs","quick-search","quick-search-option"]}
+  extra: {list => ['none','button','custom-buttons','column','footer','indicator','left','right','section','shortcut','tab','tabs','quick-search','quick-search-option']}
   is_nullable: 0
 
 =head2 title
@@ -73,64 +73,64 @@ __PACKAGE__->table("DashboardPresetConfig");
 
   data_type: 'enum'
   default_value: 'true'
-  extra: {list => ["false","true"]}
+  extra: {list => ['false','true']}
   is_nullable: 0
 
 =cut
 
 __PACKAGE__->add_columns(
-  "id",
+  'id',
   {
-    data_type => "integer",
+    data_type => 'integer',
     extra => { unsigned => 1 },
     is_auto_increment => 1,
     is_nullable => 0,
   },
-  "preset_id",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 0 },
-  "ord",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 0 },
-  "uri",
-  { data_type => "varchar", is_nullable => 0, size => 255 },
-  "parent_id",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 1 },
-  "type",
+  'preset_id',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 0 },
+  'ord',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 0 },
+  'uri',
+  { data_type => 'varchar', is_nullable => 0, size => 255 },
+  'parent_id',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 1 },
+  'type',
   {
-    data_type => "enum",
-    default_value => "none",
+    data_type => 'enum',
+    default_value => 'none',
     extra => {
       list => [
-        "none",
-        "button",
-        "custom-buttons",
-        "column",
-        "footer",
-        "indicator",
-        "left",
-        "right",
-        "section",
-        "shortcut",
-        "tab",
-        "tabs",
-        "quick-search",
-        "quick-search-option",
+        'none',
+        'button',
+        'custom-buttons',
+        'column',
+        'footer',
+        'indicator',
+        'left',
+        'right',
+        'section',
+        'shortcut',
+        'tab',
+        'tabs',
+        'quick-search',
+        'quick-search-option',
       ],
     },
     is_nullable => 0,
   },
-  "title",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "description",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "enabled",
+  'title',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'description',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'enabled',
   {
-    data_type => "enum",
-    default_value => "true",
-    extra => { list => ["false", "true"] },
+    data_type => 'enum',
+    default_value => 'true',
+    extra => { list => ['false', 'true'] },
     is_nullable => 0,
   },
 );
-__PACKAGE__->set_primary_key("id");
+__PACKAGE__->set_primary_key('id');
 
 
 # Created by DBIx::Class::Schema::Loader v0.07010 @ 2011-09-07 01:57:16

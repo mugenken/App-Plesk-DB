@@ -15,7 +15,7 @@ App::Plesk::DB::Result::TtsSlaveInfo
 
 =cut
 
-__PACKAGE__->table("tts_slave_info");
+__PACKAGE__->table('tts_slave_info');
 
 =head1 ACCESSORS
 
@@ -29,14 +29,14 @@ __PACKAGE__->table("tts_slave_info");
 
   data_type: 'enum'
   default_value: 'false'
-  extra: {list => ["false","true"]}
+  extra: {list => ['false','true']}
   is_nullable: 0
 
 =head2 can_post
 
   data_type: 'enum'
   default_value: 'false'
-  extra: {list => ["false","true"]}
+  extra: {list => ['false','true']}
   is_nullable: 0
 
 =head2 cnt_new
@@ -76,58 +76,58 @@ __PACKAGE__->table("tts_slave_info");
 =cut
 
 __PACKAGE__->add_columns(
-  "server_id",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 0 },
-  "enabled",
+  'server_id',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 0 },
+  'enabled',
   {
-    data_type => "enum",
-    default_value => "false",
-    extra => { list => ["false", "true"] },
+    data_type => 'enum',
+    default_value => 'false',
+    extra => { list => ['false', 'true'] },
     is_nullable => 0,
   },
-  "can_post",
+  'can_post',
   {
-    data_type => "enum",
-    default_value => "false",
-    extra => { list => ["false", "true"] },
+    data_type => 'enum',
+    default_value => 'false',
+    extra => { list => ['false', 'true'] },
     is_nullable => 0,
   },
-  "cnt_new",
+  'cnt_new',
   {
-    data_type => "bigint",
+    data_type => 'bigint',
     default_value => 0,
     extra => { unsigned => 1 },
     is_nullable => 0,
   },
-  "cnt_opened",
+  'cnt_opened',
   {
-    data_type => "bigint",
+    data_type => 'bigint',
     default_value => 0,
     extra => { unsigned => 1 },
     is_nullable => 0,
   },
-  "cnt_reopened",
+  'cnt_reopened',
   {
-    data_type => "bigint",
+    data_type => 'bigint',
     default_value => 0,
     extra => { unsigned => 1 },
     is_nullable => 0,
   },
-  "cnt_closed",
+  'cnt_closed',
   {
-    data_type => "bigint",
+    data_type => 'bigint',
     default_value => 0,
     extra => { unsigned => 1 },
     is_nullable => 0,
   },
-  "updated_date",
+  'updated_date',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 1,
   },
 );
-__PACKAGE__->set_primary_key("server_id");
+__PACKAGE__->set_primary_key('server_id');
 
 
 # Created by DBIx::Class::Schema::Loader v0.07010 @ 2011-09-07 01:57:16

@@ -15,7 +15,7 @@ App::Plesk::DB::Result::PasswordSecret
 
 =cut
 
-__PACKAGE__->table("password_secrets");
+__PACKAGE__->table('password_secrets');
 
 =head1 ACCESSORS
 
@@ -46,20 +46,20 @@ __PACKAGE__->table("password_secrets");
 =cut
 
 __PACKAGE__->add_columns(
-  "secret",
-  { data_type => "varchar", is_nullable => 0, size => 255 },
-  "type",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 0 },
-  "id",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 0 },
-  "created",
+  'secret',
+  { data_type => 'varchar', is_nullable => 0, size => 255 },
+  'type',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 0 },
+  'id',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 0 },
+  'created',
   {
-    data_type => "datetime",
+    data_type => 'datetime',
     datetime_undef_if_invalid => 1,
     is_nullable => 0,
   },
 );
-__PACKAGE__->set_primary_key("secret");
+__PACKAGE__->set_primary_key('secret');
 
 
 # Created by DBIx::Class::Schema::Loader v0.07010 @ 2011-09-07 01:57:16

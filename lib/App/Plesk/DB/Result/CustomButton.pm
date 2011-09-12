@@ -15,7 +15,7 @@ App::Plesk::DB::Result::CustomButton
 
 =cut
 
-__PACKAGE__->table("custom_buttons");
+__PACKAGE__->table('custom_buttons');
 
 =head1 ACCESSORS
 
@@ -51,7 +51,7 @@ __PACKAGE__->table("custom_buttons");
 
   data_type: 'enum'
   default_value: 'domain'
-  extra: {list => ["domain","client","admin","navigation"]}
+  extra: {list => ['domain','client','admin','navigation']}
   is_nullable: 0
 
 =head2 text
@@ -87,58 +87,58 @@ __PACKAGE__->table("custom_buttons");
 =cut
 
 __PACKAGE__->add_columns(
-  "id",
+  'id',
   {
-    data_type => "integer",
+    data_type => 'integer',
     extra => { unsigned => 1 },
     is_auto_increment => 1,
     is_nullable => 0,
   },
-  "sort_key",
+  'sort_key',
   {
-    data_type => "integer",
+    data_type => 'integer',
     default_value => 100,
     extra => { unsigned => 1 },
     is_nullable => 0,
   },
-  "level",
+  'level',
   {
-    data_type => "integer",
+    data_type => 'integer',
     default_value => 0,
     extra => { unsigned => 1 },
     is_nullable => 0,
   },
-  "level_id",
+  'level_id',
   {
-    data_type => "integer",
+    data_type => 'integer',
     default_value => 0,
     extra => { unsigned => 1 },
     is_nullable => 0,
   },
-  "place",
+  'place',
   {
-    data_type => "enum",
-    default_value => "domain",
-    extra => { list => ["domain", "client", "admin", "navigation"] },
+    data_type => 'enum',
+    default_value => 'domain',
+    extra => { list => ['domain', 'client', 'admin', 'navigation'] },
     is_nullable => 0,
   },
-  "text",
-  { data_type => "varchar", is_nullable => 0, size => 255 },
-  "url",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "conhelp",
-  { data_type => "text", is_nullable => 1 },
-  "options",
+  'text',
+  { data_type => 'varchar', is_nullable => 0, size => 255 },
+  'url',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'conhelp',
+  { data_type => 'text', is_nullable => 1 },
+  'options',
   {
-    data_type => "integer",
+    data_type => 'integer',
     default_value => 0,
     extra => { unsigned => 1 },
     is_nullable => 0,
   },
-  "file",
-  { data_type => "varchar", is_nullable => 0, size => 245 },
+  'file',
+  { data_type => 'varchar', is_nullable => 0, size => 245 },
 );
-__PACKAGE__->set_primary_key("id");
+__PACKAGE__->set_primary_key('id');
 
 
 # Created by DBIx::Class::Schema::Loader v0.07010 @ 2011-09-07 01:57:16

@@ -15,7 +15,7 @@ App::Plesk::DB::Result::Sbconfig
 
 =cut
 
-__PACKAGE__->table("SBConfig");
+__PACKAGE__->table('SBConfig');
 
 =head1 ACCESSORS
 
@@ -34,12 +34,12 @@ __PACKAGE__->table("SBConfig");
 =cut
 
 __PACKAGE__->add_columns(
-  "param_name",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "param_value",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
+  'param_name',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
+  'param_value',
+  { data_type => 'varchar', is_nullable => 1, size => 255 },
 );
-__PACKAGE__->add_unique_constraint("param_name", ["param_name"]);
+__PACKAGE__->add_unique_constraint('param_name', ['param_name']);
 
 
 # Created by DBIx::Class::Schema::Loader v0.07010 @ 2011-09-07 01:57:16

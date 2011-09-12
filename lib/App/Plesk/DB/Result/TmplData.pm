@@ -15,7 +15,7 @@ App::Plesk::DB::Result::TmplData
 
 =cut
 
-__PACKAGE__->table("TmplData");
+__PACKAGE__->table('TmplData');
 
 =head1 ACCESSORS
 
@@ -40,14 +40,14 @@ __PACKAGE__->table("TmplData");
 =cut
 
 __PACKAGE__->add_columns(
-  "tmpl_id",
-  { data_type => "integer", extra => { unsigned => 1 }, is_nullable => 0 },
-  "element",
-  { data_type => "varchar", is_nullable => 0, size => 245 },
-  "value",
-  { data_type => "varbinary", is_nullable => 0, size => 255 },
+  'tmpl_id',
+  { data_type => 'integer', extra => { unsigned => 1 }, is_nullable => 0 },
+  'element',
+  { data_type => 'varchar', is_nullable => 0, size => 245 },
+  'value',
+  { data_type => 'varbinary', is_nullable => 0, size => 255 },
 );
-__PACKAGE__->set_primary_key("tmpl_id", "element");
+__PACKAGE__->set_primary_key('tmpl_id', 'element');
 
 
 # Created by DBIx::Class::Schema::Loader v0.07010 @ 2011-09-07 01:57:16

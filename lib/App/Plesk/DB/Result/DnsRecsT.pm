@@ -15,7 +15,7 @@ App::Plesk::DB::Result::DnsRecsT
 
 =cut
 
-__PACKAGE__->table("dns_recs_t");
+__PACKAGE__->table('dns_recs_t');
 
 =head1 ACCESSORS
 
@@ -30,7 +30,7 @@ __PACKAGE__->table("dns_recs_t");
 
   data_type: 'enum'
   default_value: 'A'
-  extra: {list => ["NS","A","CNAME","MX","PTR","TXT","SRV"]}
+  extra: {list => ['NS','A','CNAME','MX','PTR','TXT','SRV']}
   is_nullable: 0
 
 =head2 displayhost
@@ -74,39 +74,39 @@ __PACKAGE__->table("dns_recs_t");
 =cut
 
 __PACKAGE__->add_columns(
-  "id",
+  'id',
   {
-    data_type => "integer",
+    data_type => 'integer',
     extra => { unsigned => 1 },
     is_auto_increment => 1,
     is_nullable => 0,
   },
-  "type",
+  'type',
   {
-    data_type => "enum",
-    default_value => "A",
-    extra => { list => ["NS", "A", "CNAME", "MX", "PTR", "TXT", "SRV"] },
+    data_type => 'enum',
+    default_value => 'A',
+    extra => { list => ['NS', 'A', 'CNAME', 'MX', 'PTR', 'TXT', 'SRV'] },
     is_nullable => 0,
   },
-  "displayhost",
-  { data_type => "varchar", is_nullable => 0, size => 255 },
-  "host",
-  { data_type => "varchar", is_nullable => 0, size => 255 },
-  "displayval",
-  { data_type => "varchar", is_nullable => 0, size => 255 },
-  "val",
-  { data_type => "varchar", is_nullable => 0, size => 255 },
-  "opt",
-  { data_type => "varchar", default_value => "", is_nullable => 0, size => 255 },
-  "time_stamp",
+  'displayhost',
+  { data_type => 'varchar', is_nullable => 0, size => 255 },
+  'host',
+  { data_type => 'varchar', is_nullable => 0, size => 255 },
+  'displayval',
+  { data_type => 'varchar', is_nullable => 0, size => 255 },
+  'val',
+  { data_type => 'varchar', is_nullable => 0, size => 255 },
+  'opt',
+  { data_type => 'varchar', default_value => '', is_nullable => 0, size => 255 },
+  'time_stamp',
   {
-    data_type => "timestamp",
+    data_type => 'timestamp',
     datetime_undef_if_invalid => 1,
-    default_value => \"current_timestamp",
+    default_value => \'current_timestamp',
     is_nullable => 0,
   },
 );
-__PACKAGE__->set_primary_key("id");
+__PACKAGE__->set_primary_key('id');
 
 
 # Created by DBIx::Class::Schema::Loader v0.07010 @ 2011-09-07 01:57:16
