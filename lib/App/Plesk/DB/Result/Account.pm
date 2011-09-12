@@ -15,7 +15,7 @@ App::Plesk::DB::Result::Account
 
 =cut
 
-__PACKAGE__->table("accounts");
+__PACKAGE__->table('accounts');
 
 =head1 ACCESSORS
 
@@ -41,24 +41,25 @@ __PACKAGE__->table("accounts");
 =cut
 
 __PACKAGE__->add_columns(
-  "id",
+  'id',
   {
-    data_type => "integer",
+    data_type => 'integer',
     extra => { unsigned => 1 },
     is_auto_increment => 1,
     is_nullable => 0,
   },
-  "type",
+  'type',
   {
-    data_type => "varchar",
-    default_value => "plain",
+    data_type => 'varchar',
+    default_value => 'plain',
     is_nullable => 0,
     size => 32,
   },
-  "password",
-  { data_type => "text", is_nullable => 1 },
+  'password',
+  { data_type => 'text', is_nullable => 1 },
 );
-__PACKAGE__->set_primary_key("id");
+__PACKAGE__->set_primary_key('id');
+__PACKAGE__->has_many('mails' => 'App::Plesk::DB::Result::Mail', 'account_id');
 
 
 # Created by DBIx::Class::Schema::Loader v0.07010 @ 2011-09-07 01:57:16
