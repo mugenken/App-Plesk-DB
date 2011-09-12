@@ -181,6 +181,7 @@ __PACKAGE__->belongs_to( permission => 'App::Plesk::DB::Result::Permission',
     { 'foreign.id' => 'self.perm_id' }
 );
 __PACKAGE__->has_many('aliases' => 'App::Plesk::DB::Result::MailAliase', 'mn_id');
+__PACKAGE__->has_many('redirects' => 'App::Plesk::DB::Result::MailRedir', 'mn_id');
 
 
 # Created by DBIx::Class::Schema::Loader v0.07010 @ 2011-09-07 01:57:16
