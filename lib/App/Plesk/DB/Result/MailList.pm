@@ -68,7 +68,9 @@ __PACKAGE__->add_columns(
   },
 );
 __PACKAGE__->set_primary_key('id');
-__PACKAGE__->belongs_to('domain' => 'App::Plesk::DB::Result::Domain');
+__PACKAGE__->belongs_to('domain' => 'App::Plesk::DB::Result::Domain',
+    { 'foreign.id' => 'self.dom_id' }
+);
 
 
 # Created by DBIx::Class::Schema::Loader v0.07010 @ 2011-09-07 01:57:16
